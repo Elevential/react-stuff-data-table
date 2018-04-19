@@ -1,0 +1,36 @@
+{
+  "name": "react-user-data-table",
+  "version": "0.0.1",
+  "description": "A react component to show user data in table formart",
+  "main": "build/index.js",
+  "peerDependencies": {
+    "react": "^15.5.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.0",
+    "css-loader": "^0.28.11",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "react": "^15.5.4",
+    "style-loader": "^0.21.0",
+    "webpack": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "author": {
+    "name": "Yago Luis Azedias de Melo",
+    "email": "yagoazedias@gmail.com"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "webpack-cli": "^2.0.14"
+  }
+}
