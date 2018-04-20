@@ -1,6 +1,6 @@
 import React from 'react';
+import shortId from 'shortid';
 import 'jquery';
-
 import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -19,14 +19,14 @@ const Head = (props) => (
 const Row = ({data, columns}) => (
   <tr>
     {columns.map((column) => (
-      <td>{data[column.fieldName]}</td>
+      <td key={shortId.generate()}>{data[column.fieldName]}</td>
     ))}
   </tr>
 );
 
 const Body = (props) => (
   <tbody>
-  {props.children}
+    {props.children}
   </tbody>
 );
 
@@ -37,12 +37,12 @@ class ReactUserDataTable extends React.Component {
         <table style={this.props.style} className="table table-striped">
           <Head>
             {this.props.columns.map((column) => (
-              <Header value={column.header} />
+              <Header key={shortId.generate()} value={column.header} />
             ))}
           </Head>
           <Body>
             {this.props.data.map((value) => (
-              <Row data={value} columns={this.props.columns} />
+              <Row key={shortId.generate()} data={value} columns={this.props.columns} />
             ))}
           </Body>
         </table>
