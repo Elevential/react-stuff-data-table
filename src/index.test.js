@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactUserDataTable from './index';
+import ReactStuffDataTable from './index';
 import renderer from 'react-test-renderer';
 
-it('ReactUserDataTable - renders correctly', () => {
+it('ReactStuffDataTable - renders correctly', () => {
   const tree = renderer.create(
 
-    <ReactUserDataTable
+    <ReactStuffDataTable
       columns={[
         {
           header: "ID",

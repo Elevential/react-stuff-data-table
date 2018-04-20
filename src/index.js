@@ -30,7 +30,7 @@ const Body = (props) => (
   </tbody>
 );
 
-class ReactUserDataTable extends React.Component {
+class ReactStuffDataTable extends React.Component {
   render() {
     return (
       <div className="container">
@@ -50,4 +50,4 @@ class ReactUserDataTable extends React.Component {
     );
   }
 }
-export default ReactUserDataTable;
+export default ReactStuffDataTable;
