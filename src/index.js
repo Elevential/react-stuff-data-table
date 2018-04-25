@@ -1,18 +1,19 @@
 import React from 'react';
 import shortId from 'shortid';
 import 'jquery';
-import "bootstrap/dist/js/bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css'
 
 const Header = ({value}) => (
   <th scope="col">{value}</th>
 );
 
 const Head = (props) => (
-  <thead>
-    <tr>
-      {props.children}
-    </tr>
+  <thead style={{position: ''}}>
+  <tr>
+    {props.children}
+  </tr>
   </thead>
 );
 
@@ -25,29 +26,29 @@ const Row = ({data, columns}) => (
 );
 
 const Body = (props) => (
-  <tbody>
-    {props.children}
+  <tbody style={{height: props.height}}>
+  {props.children}
   </tbody>
 );
 
-class ReactStuffDataTable extends React.Component {
+class ReactStuffSOuDataTable extends React.Component {
   render() {
     return (
       <div className="container">
-        <table style={this.props.style} className="table table-striped">
-          <Head>
-            {this.props.columns.map((column) => (
-              <Header key={shortId.generate()} value={column.header} />
-            ))}
-          </Head>
-          <Body>
+          <table style={this.props.style} className="table table-striped">
+            <Head>
+              {this.props.columns.map((column) => (
+                <Header key={shortId.generate()} value={column.header} />
+              ))}
+            </Head>
+            <Body height={this.props.height}>
             {this.props.data.map((value) => (
               <Row key={shortId.generate()} data={value} columns={this.props.columns} />
             ))}
-          </Body>
-        </table>
-      </div>
+            </Body>
+          </table>
+        </div>
     );
   }
 }
-export default ReactStuffDataTable;
+export default ReactStuffSOuDataTable;

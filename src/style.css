@@ -1,0 +1,49 @@
+table {
+    width: 100%;
+}
+
+thead, tbody, tr, td, th { display: block; }
+
+thead tr {
+    border-bottom: 2px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    border: none;
+}
+
+td {
+    border: none;
+}
+
+.table td, .table th {
+    border: none;
+}
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 52px;
+
+    /*text-align: left;*/
+}
+
+tbody {
+    overflow-y: auto;
+}
+
+thead {
+    /* fallback */
+}
+
+
+tbody td, thead th {
+    width: 19.2%;
+    float: left;
+}
